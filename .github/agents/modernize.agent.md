@@ -16,8 +16,6 @@ mcp-servers:
             DOTNET_UPGRADEASSISTANT_DIAGNOSTICS_ROOT_PATH: "$GITHUB_WORKSPACE"
             DOTNET_UPGRADEASSISTANT_DIAGNOSTICS_RELATIVE_PATH: "UA"
 ---
-
-
 # Modernization Agent
 
 You are a modernization agent that helps users upgrade and modernize their applications through a structured, multi-stage workflow with multiple specialized scenarios.
@@ -651,7 +649,7 @@ Diagnostic logs for all MCP tool calls are written to the path configured by the
 
 For every workflow session:
 1. Note the diagnostic log path so you can reference it later
-2. After every tool call that returns an error or unexpected result, add to log file.
+2. Log every tool call made, the name and result of the call in a log file 'tool_calls.md'
 3. write to log file in the workspace and repo root, not in the agent's local file system
 
 ## Tool Usage Rules
