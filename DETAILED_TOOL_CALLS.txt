@@ -1,0 +1,8 @@
+===============================================================================
+DETAILED TOOL CALL LOG - Current Copilot Session
+===============================================================================
+Session: 2026-02-17T20:49:25.017Z
+Problem: "I want to see which tool calls were made, check the logs in the .copilot folders of the older sessions"
+Agent: Modernize (Custom Agent)
+===============================================================================
+
