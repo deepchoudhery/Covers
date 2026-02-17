@@ -25,9 +25,9 @@ namespace Covers.BackgroundServices
         private readonly IServiceProvider _services;
         private DirectoryInfo _musicDirectory;
         private CoverDownloadConfiguration _coverDownloaderConfiguration;
-        private static readonly HttpClient _httpClient = new HttpClient();
+        private readonly HttpClient _httpClient;
 
-        public AlbumScanner(ILogger<AlbumScanner> logger, IServiceProvider services, IConfiguration configuration)
+        public AlbumScanner(ILogger<AlbumScanner> logger, IServiceProvider services, IConfiguration configuration, IHttpClientFactory httpClientFactory)
         {
             if (configuration == null)
             {
@@ -36,6 +36,7 @@ namespace Covers.BackgroundServices
 
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             _services = services ?? throw new ArgumentNullException(nameof(services));
+            _httpClient = httpClientFactory?.CreateClient() ?? throw new ArgumentNullException(nameof(httpClientFactory));
             var path = configuration.GetValue<string>("MusicDirectory");
             _musicDirectory = new DirectoryInfo(path);
             _coverDownloaderConfiguration = configuration.GetSection(CoverDownloadConfiguration.CoverDownloader).Get<CoverDownloadConfiguration>();

@@ -25,12 +25,13 @@ namespace Covers.Services
         private readonly SpotifyConfiguration _spotifyConfiguration;
         private SpotifyClient _spotifyClient;
         private Timer _refreshTokenTimer;
-        private static readonly HttpClient _httpClient = new HttpClient();
+        private readonly HttpClient _httpClient;
 
-        public SpotifyService(ILogger<SpotifyService> logger, IConfiguration configuration, IHubContext<CoversHub> hubContext)
+        public SpotifyService(ILogger<SpotifyService> logger, IConfiguration configuration, IHubContext<CoversHub> hubContext, IHttpClientFactory httpClientFactory)
         {
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             _hubContext = hubContext ?? throw new ArgumentNullException(nameof(hubContext));
+            _httpClient = httpClientFactory?.CreateClient() ?? throw new ArgumentNullException(nameof(httpClientFactory));
             if (configuration == null)
                 throw new ArgumentNullException(nameof(configuration));
 
