@@ -10,7 +10,7 @@ jobs:
     permissions:
       contents: read
     env:
-      DOTNET_UPGRADEASSISTANT_DIAGNOSTICS_ROOT_PATH: ${{ github.workspace }}/.logs
+      DOTNET_UPGRADEASSISTANT_DIAGNOSTICS_ROOT_PATH: ${{ github.workspace }}
       DOTNET_UPGRADEASSISTANT_DIAGNOSTICS_RELATIVE_PATH: UA
     steps:
       - name: Checkout repository

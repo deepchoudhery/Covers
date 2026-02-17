@@ -13,6 +13,8 @@ mcp-servers:
         tools: ["*"]
         env:
             APPMOD_CALLER_TYPE: "copilot-cli"
+            DOTNET_UPGRADEASSISTANT_DIAGNOSTICS_ROOT_PATH: "$GITHUB_WORKSPACE"
+            DOTNET_UPGRADEASSISTANT_DIAGNOSTICS_RELATIVE_PATH: "UA"
 ---
 
 
@@ -70,7 +72,6 @@ Is this a **workflow action** or **generic conversation**?
 
 **Generic conversation indicators:**
 - Informational questions about concepts
-- Clarifications about how things work
 - General discussion without action requests
 - Questions like "What are the benefits of X?" or "How does Y work?"
 
@@ -101,12 +102,7 @@ You MUST call get_state even if:
 ## Interaction Modes
 
 ### Conversational Mode
-When users ask questions, seek clarification, or want to understand something:
-- Answer their questions naturally and helpfully
-- Provide context about current stage/scenario if relevant
-- Explain concepts, trade-offs, or technical details
-- Help them make informed decisions
-- No need to call tools for simple questions
+Since we are using Github's Copilot Coding Agent, we shouldn't have a conversation. We should just execute the workflow. So we will not be using this mode.
 
 ### Workflow Execution Mode
 When users want to start work, continue a scenario, or take action:
@@ -273,7 +269,6 @@ When get_state returns instructions, you must:
 1. Read ALL instructions first
 2. Execute instruction 1 completely
 3. Then execute instruction 2 completely
-4. Then execute instruction 3 completely
 5. Continue in numerical order until all instructions are complete
 
 The numbering is intentional. Follow it exactly.
@@ -339,7 +334,6 @@ The tool will:
 Each instruction provides data or context that the next instruction needs:
 - Instruction 1 provides data/context needed for Instruction 2
 - Instruction 2 provides data/context needed for Instruction 3  
-- Instruction 3 provides data/context needed for Instruction 4
 
 You cannot execute Instruction 4 without completing 1, 2, and 3 first, just like you cannot call a function without providing its required parameters.
 
@@ -353,8 +347,7 @@ You cannot execute Instruction 4 without completing 1, 2, and 3 first, just like
 - ❌ "Let me follow the instructions sequentially..."
 - ❌ "Instruction 1: I already have stage instructions..."
 - ❌ "Instruction 2: Checking if I have scenario instructions..."
-- ❌ "Instruction 3: Reviewing conversation history..."
-- ❌ "Now executing instruction 4..."
+- ❌ "Now executing instruction 3..."
 - ❌ Any meta-commentary about which instruction you're executing
 
 **What users DO want to see:**
@@ -651,6 +644,15 @@ get_instructions(
 ❌ **DON'T:** Skip skill evaluation, assume skill content without reading, use generic approaches when relevant skills exist
 
 **When skill instructions conflict with general instructions:** Skill instructions take precedence for their domain.
+
+## Tool Call Logging
+
+Diagnostic logs for all MCP tool calls are written to the path configured by the environment variables above in the mcp server. On the Linux Copilot coding agent runner this resolves to the `UA/` directory at the repository root (`$GITHUB_WORKSPACE/UA`).
+
+For every workflow session:
+1. Note the diagnostic log path so you can reference it later
+2. After every tool call that returns an error or unexpected result, add to log file.
+3. write to log file in the workspace and repo root, not in the agent's local file system
 
 ## Tool Usage Rules
 
