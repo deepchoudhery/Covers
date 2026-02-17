@@ -26,6 +26,7 @@ namespace Covers
         {
             services.AddCors();
             services.AddResponseCompression();
+            services.AddHttpClient(); // Add HttpClient services
 
             services.AddMvcCore()
                .AddApiExplorer();
