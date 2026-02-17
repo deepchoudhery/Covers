@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -24,6 +25,7 @@ namespace Covers.BackgroundServices
         private readonly IServiceProvider _services;
         private DirectoryInfo _musicDirectory;
         private CoverDownloadConfiguration _coverDownloaderConfiguration;
+        private static readonly HttpClient _httpClient = new HttpClient();
 
         public AlbumScanner(ILogger<AlbumScanner> logger, IServiceProvider services, IConfiguration configuration)
         {
@@ -402,13 +404,12 @@ namespace Covers.BackgroundServices
                         existingAlbum.Covers = new List<Cover>();
                     }
 
-                    using var webclient = new WebClient();
-                    var coverImage = webclient.DownloadData(album.Album.Images[0].Url);
+                    var coverImage = await _httpClient.GetByteArrayAsync(album.Album.Images[0].Url);
                     
                     using var image = new MagickImage(coverImage);
                     if (image.Width > 800)
                     {
-                        image.Scale(new MagickGeometry { IgnoreAspectRatio = false, Width = 800 });
+                        image.Scale(new MagickGeometry { IgnoreAspectRatio = false, Width = 800u });
                     }
 
                     var frontCover = existingAlbum.Covers.FirstOrDefault(c => c.Type == CoverType.Front);
