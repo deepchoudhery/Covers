@@ -1,0 +1,21 @@
+{
+  "projects": [
+    {
+      "projectPath": "/home/runner/work/Covers/Covers/Covers.csproj",
+      "projectId": "C31274CC-9D79-450F-A45C-C696315F7AAC",
+      "projectKind": "AspNetCore",
+      "targetFrameworks": "net5.0",
+      "traitsStrings": [
+        "{Name=UA, Version=1.0.898.36735},CPS,OutputTypeExe,CSharp,DotNetCoreWeb,Web,{TargetFramework=.NETCoreApp, 5.0},UAExtensibleOperations,SdkStyleProject,C#,Managed,ReferencesFolder,AssemblyReferences,COMReferences,ProjectReferences,SharedProjectReferences,OutputGroups,SingleFileGenerators,CrossPlatformExecutable,SupportsComputeRunCommand,Pack,NetSdkOCIImageBuild,DotNetCoreRazor,AspNetCore,AspNetCoreInProcessHosting,net5.0,ProjectUnloadReload"
+      ],
+      "numberOfTotalFiles": 60,
+      "numberOfTotalLines": 3668,
+      "numberOfCodeFiles": 51,
+      "numberOfCodeLines": 3099,
+      "numberOfPackageReferences": 10,
+      "numberOfProjectReferences": 0,
+      "numberOfAssemblyReferences": 0
+    }
+  ],
+  "solutionPath": "/home/runner/work/Covers/Covers/Covers.sln"
+}

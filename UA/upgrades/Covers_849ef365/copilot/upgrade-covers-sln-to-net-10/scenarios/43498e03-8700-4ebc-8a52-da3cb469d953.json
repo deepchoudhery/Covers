@@ -1,0 +1,12 @@
+{
+  "scenarioId": "New-DotNet-Version",
+  "operationId": "43498e03-8700-4ebc-8a52-da3cb469d953",
+  "description": "Upgrade solution or project to new version of .NET",
+  "startTime": "2026-02-17T23:06:38.2651335Z",
+  "lastUpdateTime": "2026-02-17T23:07:19.6607766Z",
+  "stage": "Planning",
+  "properties": {
+    "UpgradeTargetFramework": "net10.0"
+  },
+  "folderPath": "/home/runner/work/Covers/Covers/.github/upgrades/scenarios/new-dotnet-version_43498e"
+}
