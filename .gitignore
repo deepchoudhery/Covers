@@ -232,3 +232,7 @@ _Pvt_Extensions
 .fake/
 
 *.db*
+
+# Upgrade Agent artifacts
+UA/
+tool_calls.md
