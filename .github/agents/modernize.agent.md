@@ -13,8 +13,6 @@ mcp-servers:
         tools: ["*"]
         env:
             APPMOD_CALLER_TYPE: "copilot-cli"
-            DOTNET_UPGRADEASSISTANT_DIAGNOSTICS_ROOT_PATH: "$GITHUB_WORKSPACE"
-            DOTNET_UPGRADEASSISTANT_DIAGNOSTICS_RELATIVE_PATH: "UA"
 ---
 
 # Some high level notes 
