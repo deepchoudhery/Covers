@@ -116,7 +116,7 @@ namespace Covers.Controllers
             using var image = new MagickImage(imageBytes);
             if (image.Width > 800)
             {
-                image.Scale(new MagickGeometry { IgnoreAspectRatio = false, Width = 800 });
+                image.Scale(new MagickGeometry { IgnoreAspectRatio = false, Width = 800u });
             }
 
             if (album.Covers == null)

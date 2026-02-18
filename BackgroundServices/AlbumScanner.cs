@@ -13,6 +13,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Net;
+using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -22,10 +23,11 @@ namespace Covers.BackgroundServices
     {
         private ILogger<AlbumScanner> _logger;
         private readonly IServiceProvider _services;
+        private readonly HttpClient _httpClient;
         private DirectoryInfo _musicDirectory;
         private CoverDownloadConfiguration _coverDownloaderConfiguration;
 
-        public AlbumScanner(ILogger<AlbumScanner> logger, IServiceProvider services, IConfiguration configuration)
+        public AlbumScanner(ILogger<AlbumScanner> logger, IServiceProvider services, IConfiguration configuration, HttpClient httpClient)
         {
             if (configuration == null)
             {
@@ -34,6 +36,7 @@ namespace Covers.BackgroundServices
 
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             _services = services ?? throw new ArgumentNullException(nameof(services));
+            _httpClient = httpClient ?? throw new ArgumentNullException(nameof(httpClient));
             var path = configuration.GetValue<string>("MusicDirectory");
             _musicDirectory = new DirectoryInfo(path);
             _coverDownloaderConfiguration = configuration.GetSection(CoverDownloadConfiguration.CoverDownloader).Get<CoverDownloadConfiguration>();
@@ -402,13 +405,12 @@ namespace Covers.BackgroundServices
                         existingAlbum.Covers = new List<Cover>();
                     }
 
-                    using var webclient = new WebClient();
-                    var coverImage = webclient.DownloadData(album.Album.Images[0].Url);
+                    var coverImage = await _httpClient.GetByteArrayAsync(album.Album.Images[0].Url);
                     
                     using var image = new MagickImage(coverImage);
                     if (image.Width > 800)
                     {
-                        image.Scale(new MagickGeometry { IgnoreAspectRatio = false, Width = 800 });
+                        image.Scale(new MagickGeometry { IgnoreAspectRatio = false, Width = 800u });
                     }
 
                     var frontCover = existingAlbum.Covers.FirstOrDefault(c => c.Type == CoverType.Front);

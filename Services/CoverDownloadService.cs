@@ -111,7 +111,7 @@ namespace Covers.Services
                 using var cover = new MagickImage(File.ReadAllBytes(fileName));
                 if (cover.Width > 800)
                 {
-                    cover.Scale(new MagickGeometry { IgnoreAspectRatio = false, Width = 800 });
+                    cover.Scale(new MagickGeometry { IgnoreAspectRatio = false, Width = 800u });
                 }
 
                 return cover.ToByteArray(MagickFormat.Png);
