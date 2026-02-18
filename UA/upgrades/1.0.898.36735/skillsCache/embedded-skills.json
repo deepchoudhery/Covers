@@ -1,0 +1,473 @@
+{
+  "cacheCreated": "2026-02-18T00:31:15.2200152Z",
+  "skills": [
+    {
+      "manifest": {
+        "name": "how-to-create-skills",
+        "version": null,
+        "description": "Guide users through creating new skills with proper format, location selection, and content structure",
+        "author": null,
+        "license": null,
+        "resources": {},
+        "metadata": {},
+        "tags": [],
+        "discovery": 1,
+        "kind": 0
+      },
+      "filePath": "/home/runner/.upgrades/1.0.898.36735/skills/generic/how-to-create-skills/skill.md",
+      "relativePath": "generic/how-to-create-skills/skill.md",
+      "baseDirectory": "/home/runner/.upgrades/1.0.898.36735/skills/generic/how-to-create-skills",
+      "lastModified": "2026-02-18T00:31:15.162746Z",
+      "fileSize": 10714
+    },
+    {
+      "manifest": {
+        "name": "project-package-management",
+        "version": null,
+        "description": "Manage .NET package references and dependencies: add, remove, or update PackageReference, ProjectReference,  FrameworkReference items. Handles both standard package management and Central Package Management (CPM) with  Directory.Packages.props. Discovers where packages are defined before modification.\n",
+        "author": null,
+        "license": null,
+        "resources": {},
+        "metadata": {
+          "tags": {
+            "traits": ".NET|CSharp|VisualBasic|DotNetCore"
+          },
+          "discovery": "lazy"
+        },
+        "tags": [],
+        "discovery": 2,
+        "kind": 0
+      },
+      "filePath": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/common/project-package-management/skill.md",
+      "relativePath": "dotnet/common/project-package-management/skill.md",
+      "baseDirectory": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/common/project-package-management",
+      "lastModified": "2026-02-18T00:31:15.160746Z",
+      "fileSize": 13588
+    },
+    {
+      "manifest": {
+        "name": "project-properties-modification",
+        "version": null,
+        "description": "Modify .NET project properties in PropertyGroup elements: TargetFramework, LangVersion, Nullable, OutputType,  TreatWarningsAsErrors, and other build configuration settings. Discovers import chain (Directory.Build.props,  .targets files) to find where properties are defined before modification.\n",
+        "author": null,
+        "license": null,
+        "resources": {},
+        "metadata": {
+          "tags": {
+            "traits": ".NET|CSharp|VisualBasic|DotNetCore"
+          },
+          "discovery": "lazy"
+        },
+        "tags": [],
+        "discovery": 2,
+        "kind": 0
+      },
+      "filePath": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/common/project-properties-modification/skill.md",
+      "relativePath": "dotnet/common/project-properties-modification/skill.md",
+      "baseDirectory": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/common/project-properties-modification",
+      "lastModified": "2026-02-18T00:31:15.160746Z",
+      "fileSize": 12566
+    },
+    {
+      "manifest": {
+        "name": "azure-functions-startup-migration",
+        "version": null,
+        "description": "Migrate Azure Functions in-process Startup hooks to isolated worker model with Program.cs service registration",
+        "author": null,
+        "license": null,
+        "resources": {},
+        "metadata": {
+          "tags": {
+            "traits": ".NET|CSharp|VisualBasic|DotNetCore"
+          },
+          "discovery": "lazy"
+        },
+        "tags": [],
+        "discovery": 2,
+        "kind": 0
+      },
+      "filePath": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/azure-functions/azure-functions-startup-migration/skill.md",
+      "relativePath": "dotnet/azure-functions/azure-functions-startup-migration/skill.md",
+      "baseDirectory": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/azure-functions/azure-functions-startup-migration",
+      "lastModified": "2026-02-18T00:31:15.160746Z",
+      "fileSize": 11803
+    },
+    {
+      "manifest": {
+        "name": "azure-functions-v2-migration",
+        "version": null,
+        "description": "Migrate Azure Functions from legacy HostBuilder or in-process model to modern Version 2.x with IHostApplicationBuilder and Application Insights",
+        "author": null,
+        "license": null,
+        "resources": {},
+        "metadata": {
+          "tags": {
+            "traits": ".NET|CSharp|VisualBasic|DotNetCore"
+          },
+          "discovery": "lazy"
+        },
+        "tags": [],
+        "discovery": 2,
+        "kind": 0
+      },
+      "filePath": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/azure-functions/azure-functions-v2-migration/skill.md",
+      "relativePath": "dotnet/azure-functions/azure-functions-v2-migration/skill.md",
+      "baseDirectory": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/azure-functions/azure-functions-v2-migration",
+      "lastModified": "2026-02-18T00:31:15.160746Z",
+      "fileSize": 14086
+    },
+    {
+      "manifest": {
+        "name": "migrate-autofac-to-dotnet-di",
+        "version": null,
+        "description": "Replace Autofac dependency injection with ASP.NET Core\u0027s built-in DI, mapping service registrations and lifetimes",
+        "author": null,
+        "license": null,
+        "resources": {},
+        "metadata": {
+          "tags": {
+            "traits": ".NET|CSharp|VisualBasic|DotNetCore"
+          },
+          "discovery": "lazy"
+        },
+        "tags": [],
+        "discovery": 2,
+        "kind": 0
+      },
+      "filePath": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/libraries/migrate-autofac-to-dotnet-di/skill.md",
+      "relativePath": "dotnet/libraries/migrate-autofac-to-dotnet-di/skill.md",
+      "baseDirectory": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/libraries/migrate-autofac-to-dotnet-di",
+      "lastModified": "2026-02-18T00:31:15.160746Z",
+      "fileSize": 4633
+    },
+    {
+      "manifest": {
+        "name": "use-autofac-with-dotnet",
+        "version": null,
+        "description": "Configure Autofac as the service provider factory in .NET Core applications while preserving existing container registrations",
+        "author": null,
+        "license": null,
+        "resources": {},
+        "metadata": {
+          "tags": {
+            "traits": ".NET|CSharp|VisualBasic|DotNetCore"
+          },
+          "discovery": "lazy"
+        },
+        "tags": [],
+        "discovery": 2,
+        "kind": 0
+      },
+      "filePath": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/libraries/use-autofac-with-dotnet/skill.md",
+      "relativePath": "dotnet/libraries/use-autofac-with-dotnet/skill.md",
+      "baseDirectory": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/libraries/use-autofac-with-dotnet",
+      "lastModified": "2026-02-18T00:31:15.161746Z",
+      "fileSize": 4547
+    },
+    {
+      "manifest": {
+        "name": "newtonsoft-json-migration",
+        "version": null,
+        "description": "Migrate projects from Newtonsoft.Json to System.Text.Json, updating package references, code files, and handling API differences",
+        "author": null,
+        "license": null,
+        "resources": {},
+        "metadata": {
+          "tags": {
+            "traits": ".NET|CSharp|VisualBasic|DotNetCore"
+          }
+        },
+        "tags": [],
+        "discovery": 1,
+        "kind": 0
+      },
+      "filePath": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/libraries/newtonsoft-json-migration/skill.md",
+      "relativePath": "dotnet/libraries/newtonsoft-json-migration/skill.md",
+      "baseDirectory": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/libraries/newtonsoft-json-migration",
+      "lastModified": "2026-02-18T00:31:15.161746Z",
+      "fileSize": 9362
+    },
+    {
+      "manifest": {
+        "name": "sdk-style-conversion",
+        "version": null,
+        "description": "Convert legacy non-SDK-style .NET projects to modern SDK-style format while preserving target frameworks, dependencies, and build behavior",
+        "author": null,
+        "license": null,
+        "resources": {},
+        "metadata": {
+          "tags": {
+            "traits": ".NET|CSharp|VisualBasic|DotNetCore"
+          }
+        },
+        "tags": [],
+        "discovery": 1,
+        "kind": 0
+      },
+      "filePath": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/libraries/sdk-style-conversion/skill.md",
+      "relativePath": "dotnet/libraries/sdk-style-conversion/skill.md",
+      "baseDirectory": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/libraries/sdk-style-conversion",
+      "lastModified": "2026-02-18T00:31:15.161746Z",
+      "fileSize": 7348
+    },
+    {
+      "manifest": {
+        "name": "sqlclient-migration",
+        "version": null,
+        "description": "Migrate from System.Data.SqlClient to Microsoft.Data.SqlClient, updating packages, namespaces, and connection string encryption settings",
+        "author": null,
+        "license": null,
+        "resources": {},
+        "metadata": {
+          "tags": {
+            "traits": ".NET|CSharp|VisualBasic|DotNetCore"
+          }
+        },
+        "tags": [],
+        "discovery": 1,
+        "kind": 0
+      },
+      "filePath": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/libraries/sqlclient-migration/skill.md",
+      "relativePath": "dotnet/libraries/sqlclient-migration/skill.md",
+      "baseDirectory": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/libraries/sqlclient-migration",
+      "lastModified": "2026-02-18T00:31:15.161746Z",
+      "fileSize": 9976
+    },
+    {
+      "manifest": {
+        "name": "msmq-migration",
+        "version": null,
+        "description": "Replace System.Messaging with MSMQ.Messaging for .NET Core compatibility, updating queue configuration and DI patterns",
+        "author": null,
+        "license": null,
+        "resources": {},
+        "metadata": {
+          "tags": {
+            "traits": ".NET|CSharp|VisualBasic|DotNetCore"
+          }
+        },
+        "tags": [],
+        "discovery": 1,
+        "kind": 0
+      },
+      "filePath": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/libraries/msmq-migration/skill.md",
+      "relativePath": "dotnet/libraries/msmq-migration/skill.md",
+      "baseDirectory": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/libraries/msmq-migration",
+      "lastModified": "2026-02-18T00:31:15.161746Z",
+      "fileSize": 3590
+    },
+    {
+      "manifest": {
+        "name": "owin-to-middleware",
+        "version": null,
+        "description": "Remove OWIN dependencies and replace with native ASP.NET Core middleware, authentication, and pipeline components",
+        "author": null,
+        "license": null,
+        "resources": {},
+        "metadata": {
+          "tags": {
+            "traits": ".NET|CSharp|VisualBasic|DotNetCore"
+          },
+          "discovery": "lazy"
+        },
+        "tags": [],
+        "discovery": 2,
+        "kind": 0
+      },
+      "filePath": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/libraries/owin-to-middleware/skill.md",
+      "relativePath": "dotnet/libraries/owin-to-middleware/skill.md",
+      "baseDirectory": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/libraries/owin-to-middleware",
+      "lastModified": "2026-02-18T00:31:15.161746Z",
+      "fileSize": 5899
+    },
+    {
+      "manifest": {
+        "name": "semantic-kernel-to-agents-framework",
+        "version": null,
+        "description": "Migrate from Semantic Kernel Agents to Microsoft Agent Framework, updating packages, agent creation, method calls, and tool registration patterns",
+        "author": null,
+        "license": null,
+        "resources": {},
+        "metadata": {
+          "tags": {
+            "traits": ".NET|CSharp|VisualBasic|DotNetCore"
+          }
+        },
+        "tags": [],
+        "discovery": 1,
+        "kind": 0
+      },
+      "filePath": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/libraries/semantic-kernel-to-agents-framework/skill.md",
+      "relativePath": "dotnet/libraries/semantic-kernel-to-agents-framework/skill.md",
+      "baseDirectory": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/libraries/semantic-kernel-to-agents-framework",
+      "lastModified": "2026-02-18T00:31:15.161746Z",
+      "fileSize": 68309
+    },
+    {
+      "manifest": {
+        "name": "ef-dbcontext-migration",
+        "version": null,
+        "description": "Migrate Entity Framework DbContext registration from Global.asax to ASP.NET Core DI, supporting both EF6 and EF Core patterns",
+        "author": null,
+        "license": null,
+        "resources": {},
+        "metadata": {
+          "tags": {
+            "traits": ".NET|CSharp|VisualBasic|DotNetCore"
+          }
+        },
+        "tags": [],
+        "discovery": 1,
+        "kind": 0
+      },
+      "filePath": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/entity-framework/ef-dbcontext-migration/skill.md",
+      "relativePath": "dotnet/entity-framework/ef-dbcontext-migration/skill.md",
+      "baseDirectory": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/entity-framework/ef-dbcontext-migration",
+      "lastModified": "2026-02-18T00:31:15.160746Z",
+      "fileSize": 7978
+    },
+    {
+      "manifest": {
+        "name": "wcf-to-corewcf",
+        "version": null,
+        "description": "Migrate WCF services from .NET Framework to CoreWCF for .NET Core/.NET 5\u002B, converting hosting, configuration, and behaviors",
+        "author": null,
+        "license": null,
+        "resources": {},
+        "metadata": {
+          "tags": {
+            "traits": ".NET|CSharp|VisualBasic|DotNetCore"
+          }
+        },
+        "tags": [],
+        "discovery": 1,
+        "kind": 0
+      },
+      "filePath": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/wcf/wcf-to-corewcf/skill.md",
+      "relativePath": "dotnet/wcf/wcf-to-corewcf/skill.md",
+      "baseDirectory": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/wcf/wcf-to-corewcf",
+      "lastModified": "2026-02-18T00:31:15.161746Z",
+      "fileSize": 9158
+    },
+    {
+      "manifest": {
+        "name": "mvc-bundling-migration",
+        "version": null,
+        "description": "Remove System.Web.Optimization bundling and replace with direct script/style tags in Razor views",
+        "author": null,
+        "license": null,
+        "resources": {},
+        "metadata": {
+          "tags": {
+            "traits": ".NET|CSharp|VisualBasic|DotNetCore"
+          },
+          "discovery": "lazy"
+        },
+        "tags": [],
+        "discovery": 2,
+        "kind": 0
+      },
+      "filePath": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/aspnet/mvc/mvc-bundling-migration/skill.md",
+      "relativePath": "dotnet/aspnet/mvc/mvc-bundling-migration/skill.md",
+      "baseDirectory": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/aspnet/mvc/mvc-bundling-migration",
+      "lastModified": "2026-02-18T00:31:15.159746Z",
+      "fileSize": 2890
+    },
+    {
+      "manifest": {
+        "name": "mvc-routing-migration",
+        "version": null,
+        "description": "Convert RouteCollection-based routing to ASP.NET Core endpoint routing with MapControllerRoute in Program.cs",
+        "author": null,
+        "license": null,
+        "resources": {},
+        "metadata": {
+          "tags": {
+            "traits": ".NET|CSharp|VisualBasic|DotNetCore"
+          },
+          "discovery": "lazy"
+        },
+        "tags": [],
+        "discovery": 2,
+        "kind": 0
+      },
+      "filePath": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/aspnet/mvc/mvc-routing-migration/skill.md",
+      "relativePath": "dotnet/aspnet/mvc/mvc-routing-migration/skill.md",
+      "baseDirectory": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/aspnet/mvc/mvc-routing-migration",
+      "lastModified": "2026-02-18T00:31:15.160746Z",
+      "fileSize": 4502
+    },
+    {
+      "manifest": {
+        "name": "aspnet-identity-migration",
+        "version": null,
+        "description": "Migrate ASP.NET Identity to ASP.NET Core Identity, updating DbContext, UserManager, SignInManager, and authentication middleware",
+        "author": null,
+        "license": null,
+        "resources": {},
+        "metadata": {
+          "tags": {
+            "traits": ".NET|CSharp|VisualBasic|DotNetCore"
+          },
+          "discovery": "lazy"
+        },
+        "tags": [],
+        "discovery": 2,
+        "kind": 0
+      },
+      "filePath": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/aspnet/mvc/aspnet-identity-migration/skill.md",
+      "relativePath": "dotnet/aspnet/mvc/aspnet-identity-migration/skill.md",
+      "baseDirectory": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/aspnet/mvc/aspnet-identity-migration",
+      "lastModified": "2026-02-18T00:31:15.159746Z",
+      "fileSize": 6202
+    },
+    {
+      "manifest": {
+        "name": "global-asax-migration",
+        "version": null,
+        "description": "Migrate Global.asax application lifecycle events to ASP.NET Core middleware, startup configuration, and Program.cs",
+        "author": null,
+        "license": null,
+        "resources": {},
+        "metadata": {
+          "tags": {
+            "traits": ".NET|CSharp|VisualBasic|DotNetCore"
+          },
+          "discovery": "lazy"
+        },
+        "tags": [],
+        "discovery": 2,
+        "kind": 0
+      },
+      "filePath": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/aspnet/mvc/global-asax-migration/skill.md",
+      "relativePath": "dotnet/aspnet/mvc/global-asax-migration/skill.md",
+      "baseDirectory": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/aspnet/mvc/global-asax-migration",
+      "lastModified": "2026-02-18T00:31:15.159746Z",
+      "fileSize": 5222
+    },
+    {
+      "manifest": {
+        "name": "mvc-filters-migration",
+        "version": null,
+        "description": "Convert GlobalFilterCollection and HandleErrorAttribute to ASP.NET Core exception handling middleware and filter pipeline",
+        "author": null,
+        "license": null,
+        "resources": {},
+        "metadata": {
+          "tags": {
+            "traits": ".NET|CSharp|VisualBasic|DotNetCore"
+          },
+          "discovery": "lazy"
+        },
+        "tags": [],
+        "discovery": 2,
+        "kind": 0
+      },
+      "filePath": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/aspnet/mvc/mvc-filters-migration/skill.md",
+      "relativePath": "dotnet/aspnet/mvc/mvc-filters-migration/skill.md",
+      "baseDirectory": "/home/runner/.upgrades/1.0.898.36735/skills/dotnet/aspnet/mvc/mvc-filters-migration",
+      "lastModified": "2026-02-18T00:31:15.159746Z",
+      "fileSize": 5274
+    }
+  ]
+}

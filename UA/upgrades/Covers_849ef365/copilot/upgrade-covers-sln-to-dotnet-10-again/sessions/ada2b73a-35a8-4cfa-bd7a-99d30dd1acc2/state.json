@@ -1,0 +1,8 @@
+{
+  "lastIntent": null,
+  "scenario": {
+    "scenarioId": "New-DotNet-Version",
+    "operationId": "e7fb30c4-9159-4641-8353-f4bc59c5acbc",
+    "description": "Upgrade solution or project to new version of .NET"
+  }
+}
