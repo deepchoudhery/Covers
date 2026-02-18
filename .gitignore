@@ -232,3 +232,6 @@ _Pvt_Extensions
 .fake/
 
 *.db*
+
+# Upgrade Agent diagnostic logs
+UA/
