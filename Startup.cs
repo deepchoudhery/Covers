@@ -39,6 +39,7 @@ namespace Covers
             services.AddDbContext<CoversContext>(options =>
                          options.UseLazyLoadingProxies().UseSqlite(Configuration.GetConnectionString("CoversContext")));
             services.AddSignalR();
+            services.AddHttpClient();
             services.AddTransient<ICoverService, CoverService>();
             services.AddTransient<IAlbumService, AlbumService>();
             services.AddTransient<IArtistService, ArtistService>();
