@@ -9,9 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: read
-    env:
-      DOTNET_UPGRADEASSISTANT_DIAGNOSTICS_ROOT_PATH: ${{ github.workspace }}
-      DOTNET_UPGRADEASSISTANT_DIAGNOSTICS_RELATIVE_PATH: UA
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
