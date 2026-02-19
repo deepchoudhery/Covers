@@ -18,6 +18,30 @@ jobs:
           node-version: '20'
       - name: Install Copilot CLI
         run: npm install -g @github/copilot
+      - name: Install VS workload for .NET Framework 4.8
+        shell: pwsh
+        run: |
+          $vsInstaller = "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe"
+          & $vsInstaller modify --installPath "C:\Program Files\Microsoft Visual Studio\2022\Enterprise" `
+            --add Microsoft.VisualStudio.Workload.ManagedDesktop `
+            --add Microsoft.Net.Component.4.8.SDK `
+            --add Microsoft.Net.Component.4.8.TargetingPack `
+            --quiet --norestart --wait
+      - name: Verify .NET Framework 4.8 support
+        shell: pwsh
+        run: |
+          $refAssemblies = "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8"
+          $msbuild = & "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe" -latest -requires Microsoft.Component.MSBuild -find MSBuild\**\Bin\MSBuild.exe | Select-Object -First 1
+          if (-not (Test-Path $refAssemblies)) {
+            Write-Error ".NET Framework 4.8 reference assemblies not found at $refAssemblies"
+            exit 1
+          }
+          if (-not $msbuild -or -not (Test-Path $msbuild)) {
+            Write-Error "MSBuild not found"
+            exit 1
+          }
+          Write-Host ".NET Framework 4.8 reference assemblies: OK"
+          Write-Host "MSBuild: $msbuild"
       - name: Setup .NET 10 SDK
         uses: actions/setup-dotnet@v4
         with:
