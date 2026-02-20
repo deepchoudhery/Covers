@@ -8,7 +8,7 @@ using Microsoft.Extensions.Logging;
 using SpotifyAPI.Web;
 using System;
 using System.Collections.Generic;
-using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 using System.Timers;
 
@@ -24,6 +24,7 @@ namespace Covers.Services
         private readonly SpotifyConfiguration _spotifyConfiguration;
         private SpotifyClient _spotifyClient;
         private Timer _refreshTokenTimer;
+        private static readonly HttpClient _httpClient = new HttpClient();
 
         public SpotifyService(ILogger<SpotifyService> logger, IConfiguration configuration, IHubContext<CoversHub> hubContext)
         {
@@ -177,8 +178,7 @@ namespace Covers.Services
             
             if (response.Albums.Items.Count > 0)
             {
-                using var webclient = new WebClient();
-                var coverImage = webclient.DownloadData(response.Albums.Items[0].Images[0].Url);
+                var coverImage = await _httpClient.GetByteArrayAsync(response.Albums.Items[0].Images[0].Url);
 
                 using var image = new MagickImage(coverImage);
                 if (image.Width > 800)

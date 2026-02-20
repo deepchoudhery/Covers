@@ -1,0 +1,396 @@
+{
+  "settings": {
+    "components": {
+      "code": true,
+      "binaries": false
+    },
+    "targetId": "net10.0",
+    "targetDisplayName": ".NETCoreApp,Version=v10.0"
+  },
+  "analysisStartTime": "2026-02-20T20:06:48.1525954Z",
+  "analysisEndTime": "2026-02-20T20:06:53.5022636Z",
+  "privacyModeHelpUrl": "https://go.microsoft.com/fwlink/?linkid=2270980",
+  "stats": {
+    "summary": {
+      "projects": 1,
+      "issues": 4,
+      "incidents": 12,
+      "effort": 12
+    },
+    "charts": {
+      "severity": {
+        "Mandatory": 1,
+        "Optional": 6,
+        "Potential": 5,
+        "Information": 0
+      },
+      "category": {
+        "NuGet": 11,
+        "Project": 1
+      }
+    }
+  },
+  "projects": [
+    {
+      "path": "Covers.csproj",
+      "startingProject": true,
+      "issues": 4,
+      "storyPoints": 12,
+      "properties": {
+        "appName": "Covers",
+        "projectKind": "AspNetCore",
+        "frameworks": [
+          "net5.0"
+        ],
+        "languages": [
+          "C#"
+        ],
+        "tools": [
+          "MSBuild"
+        ],
+        "isSdkStyle": true,
+        "numberOfFiles": 53,
+        "numberOfCodeFiles": 51,
+        "linesTotal": 3142,
+        "linesOfCode": 3099,
+        "totalApiScanned": 0,
+        "minLinesOfCodeToChange": 0,
+        "maxLinesOfCodeToChange": 0
+      },
+      "ruleInstances": [
+        {
+          "incidentId": "f23aec6d-cf63-4c5a-aed0-d7a4411a44b0",
+          "ruleId": "NuGet.0002",
+          "projectPath": "Covers.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.SpaServices.Extensions, 5.0.1\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.SpaServices.Extensions, and replace with new package Microsoft.AspNetCore.SpaServices.Extensions 10.0.3",
+              "protected": "Microsoft.AspNetCore.SpaServices.Extensions, 5.0.1\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.SpaServices.Extensions, and replace with new package Microsoft.AspNetCore.SpaServices.Extensions 10.0.3"
+            },
+            "kind": "File",
+            "path": "Covers.csproj",
+            "snippet": "Microsoft.AspNetCore.SpaServices.Extensions, 5.0.1\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.SpaServices.Extensions, and replace with new package Microsoft.AspNetCore.SpaServices.Extensions 10.0.3",
+            "protectedSnippet": "Microsoft.AspNetCore.SpaServices.Extensions, 5.0.1\n\nRecommendation:\n\nRemove Microsoft.AspNetCore.SpaServices.Extensions, and replace with new package Microsoft.AspNetCore.SpaServices.Extensions 10.0.3",
+            "label": "Microsoft.AspNetCore.SpaServices.Extensions 5.0.1",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.SpaServices.Extensions",
+              "PackageVersion": "5.0.1",
+              "PackageNewVersion": "10.0.3",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "e3ebaf81-8f6f-4bf3-970a-4fe77c31adf0",
+          "ruleId": "NuGet.0002",
+          "projectPath": "Covers.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Design, 5.0.1\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Design, and replace with new package Microsoft.EntityFrameworkCore.Design 10.0.3",
+              "protected": "Microsoft.EntityFrameworkCore.Design, 5.0.1\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Design, and replace with new package Microsoft.EntityFrameworkCore.Design 10.0.3"
+            },
+            "kind": "File",
+            "path": "Covers.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Design, 5.0.1\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Design, and replace with new package Microsoft.EntityFrameworkCore.Design 10.0.3",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Design, 5.0.1\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Design, and replace with new package Microsoft.EntityFrameworkCore.Design 10.0.3",
+            "label": "Microsoft.EntityFrameworkCore.Design 5.0.1",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.Design",
+              "PackageVersion": "5.0.1",
+              "PackageNewVersion": "10.0.3",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "759ede66-fbab-448d-8e0b-cdeae90da653",
+          "ruleId": "NuGet.0002",
+          "projectPath": "Covers.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Proxies, 5.0.1\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Proxies, and replace with new package Microsoft.EntityFrameworkCore.Proxies 10.0.3",
+              "protected": "Microsoft.EntityFrameworkCore.Proxies, 5.0.1\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Proxies, and replace with new package Microsoft.EntityFrameworkCore.Proxies 10.0.3"
+            },
+            "kind": "File",
+            "path": "Covers.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Proxies, 5.0.1\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Proxies, and replace with new package Microsoft.EntityFrameworkCore.Proxies 10.0.3",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Proxies, 5.0.1\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Proxies, and replace with new package Microsoft.EntityFrameworkCore.Proxies 10.0.3",
+            "label": "Microsoft.EntityFrameworkCore.Proxies 5.0.1",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.Proxies",
+              "PackageVersion": "5.0.1",
+              "PackageNewVersion": "10.0.3",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "48cdc8bf-7e26-462f-9927-63590e312bbc",
+          "ruleId": "NuGet.0002",
+          "projectPath": "Covers.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Sqlite, 5.0.1\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Sqlite, and replace with new package Microsoft.EntityFrameworkCore.Sqlite 10.0.3",
+              "protected": "Microsoft.EntityFrameworkCore.Sqlite, 5.0.1\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Sqlite, and replace with new package Microsoft.EntityFrameworkCore.Sqlite 10.0.3"
+            },
+            "kind": "File",
+            "path": "Covers.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Sqlite, 5.0.1\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Sqlite, and replace with new package Microsoft.EntityFrameworkCore.Sqlite 10.0.3",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Sqlite, 5.0.1\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Sqlite, and replace with new package Microsoft.EntityFrameworkCore.Sqlite 10.0.3",
+            "label": "Microsoft.EntityFrameworkCore.Sqlite 5.0.1",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.Sqlite",
+              "PackageVersion": "5.0.1",
+              "PackageNewVersion": "10.0.3",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "f87e0950-580e-4c6e-8434-3a9e701401f4",
+          "ruleId": "NuGet.0002",
+          "projectPath": "Covers.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Tools, 5.0.1\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 10.0.3",
+              "protected": "Microsoft.EntityFrameworkCore.Tools, 5.0.1\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 10.0.3"
+            },
+            "kind": "File",
+            "path": "Covers.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Tools, 5.0.1\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 10.0.3",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Tools, 5.0.1\n\nRecommendation:\n\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools 10.0.3",
+            "label": "Microsoft.EntityFrameworkCore.Tools 5.0.1",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.Tools",
+              "PackageVersion": "5.0.1",
+              "PackageNewVersion": "10.0.3",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "0290c513-854c-4348-bfaf-05d033b15412",
+          "ruleId": "NuGet.0004",
+          "projectPath": "Covers.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Magick.NET-Q8-AnyCPU, 7.22.3\n\nRecommendation:\n\nMagick.NET-Q8-AnyCPU, 14.10.2",
+              "protected": "Magick.NET-Q8-AnyCPU, 7.22.3\n\nRecommendation:\n\nMagick.NET-Q8-AnyCPU, 14.10.2"
+            },
+            "kind": "File",
+            "path": "Covers.csproj",
+            "snippet": "Magick.NET-Q8-AnyCPU, 7.22.3\n\nRecommendation:\n\nMagick.NET-Q8-AnyCPU, 14.10.2",
+            "protectedSnippet": "Magick.NET-Q8-AnyCPU, 7.22.3\n\nRecommendation:\n\nMagick.NET-Q8-AnyCPU, 14.10.2",
+            "label": "Magick.NET-Q8-AnyCPU 7.22.3",
+            "properties": {
+              "PackageId": "Magick.NET-Q8-AnyCPU",
+              "PackageVersion": "7.22.3",
+              "PackageNewVersion": "14.10.2",
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "665de21a-e10d-47af-a94e-fd66bdea02e4",
+          "ruleId": "NuGet.0005",
+          "projectPath": "Covers.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.AspNetCore.SpaServices.Extensions, 5.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.SpaServices.Extensions, and replace with new package Microsoft.AspNetCore.SpaServices.Extensions, 10.0.3",
+              "protected": "Microsoft.AspNetCore.SpaServices.Extensions, 5.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.SpaServices.Extensions, and replace with new package Microsoft.AspNetCore.SpaServices.Extensions, 10.0.3"
+            },
+            "kind": "File",
+            "path": "Covers.csproj",
+            "snippet": "Microsoft.AspNetCore.SpaServices.Extensions, 5.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.SpaServices.Extensions, and replace with new package Microsoft.AspNetCore.SpaServices.Extensions, 10.0.3",
+            "protectedSnippet": "Microsoft.AspNetCore.SpaServices.Extensions, 5.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.AspNetCore.SpaServices.Extensions, and replace with new package Microsoft.AspNetCore.SpaServices.Extensions, 10.0.3",
+            "label": "Microsoft.AspNetCore.SpaServices.Extensions 5.0.1",
+            "properties": {
+              "PackageId": "Microsoft.AspNetCore.SpaServices.Extensions",
+              "PackageVersion": "5.0.1",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "82a2b168-892b-4c2a-8cf6-b1cabae83cdf",
+          "ruleId": "NuGet.0005",
+          "projectPath": "Covers.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Design, 5.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.EntityFrameworkCore.Design, and replace with new package Microsoft.EntityFrameworkCore.Design, 10.0.3",
+              "protected": "Microsoft.EntityFrameworkCore.Design, 5.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.EntityFrameworkCore.Design, and replace with new package Microsoft.EntityFrameworkCore.Design, 10.0.3"
+            },
+            "kind": "File",
+            "path": "Covers.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Design, 5.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.EntityFrameworkCore.Design, and replace with new package Microsoft.EntityFrameworkCore.Design, 10.0.3",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Design, 5.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.EntityFrameworkCore.Design, and replace with new package Microsoft.EntityFrameworkCore.Design, 10.0.3",
+            "label": "Microsoft.EntityFrameworkCore.Design 5.0.1",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.Design",
+              "PackageVersion": "5.0.1",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "26a7d10e-17a2-4c1f-8804-0af2c1ff7800",
+          "ruleId": "NuGet.0005",
+          "projectPath": "Covers.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Proxies, 5.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.EntityFrameworkCore.Proxies, and replace with new package Microsoft.EntityFrameworkCore.Proxies, 10.0.3",
+              "protected": "Microsoft.EntityFrameworkCore.Proxies, 5.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.EntityFrameworkCore.Proxies, and replace with new package Microsoft.EntityFrameworkCore.Proxies, 10.0.3"
+            },
+            "kind": "File",
+            "path": "Covers.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Proxies, 5.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.EntityFrameworkCore.Proxies, and replace with new package Microsoft.EntityFrameworkCore.Proxies, 10.0.3",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Proxies, 5.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.EntityFrameworkCore.Proxies, and replace with new package Microsoft.EntityFrameworkCore.Proxies, 10.0.3",
+            "label": "Microsoft.EntityFrameworkCore.Proxies 5.0.1",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.Proxies",
+              "PackageVersion": "5.0.1",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "ee096708-7c5c-41eb-9e71-9bdd7da4ff34",
+          "ruleId": "NuGet.0005",
+          "projectPath": "Covers.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Sqlite, 5.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.EntityFrameworkCore.Sqlite, and replace with new package Microsoft.EntityFrameworkCore.Sqlite, 10.0.3",
+              "protected": "Microsoft.EntityFrameworkCore.Sqlite, 5.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.EntityFrameworkCore.Sqlite, and replace with new package Microsoft.EntityFrameworkCore.Sqlite, 10.0.3"
+            },
+            "kind": "File",
+            "path": "Covers.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Sqlite, 5.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.EntityFrameworkCore.Sqlite, and replace with new package Microsoft.EntityFrameworkCore.Sqlite, 10.0.3",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Sqlite, 5.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.EntityFrameworkCore.Sqlite, and replace with new package Microsoft.EntityFrameworkCore.Sqlite, 10.0.3",
+            "label": "Microsoft.EntityFrameworkCore.Sqlite 5.0.1",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.Sqlite",
+              "PackageVersion": "5.0.1",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "09e52fc9-2187-49c0-90e0-d3415c7ba48a",
+          "ruleId": "NuGet.0005",
+          "projectPath": "Covers.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Microsoft.EntityFrameworkCore.Tools, 5.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools, 10.0.3",
+              "protected": "Microsoft.EntityFrameworkCore.Tools, 5.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools, 10.0.3"
+            },
+            "kind": "File",
+            "path": "Covers.csproj",
+            "snippet": "Microsoft.EntityFrameworkCore.Tools, 5.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools, 10.0.3",
+            "protectedSnippet": "Microsoft.EntityFrameworkCore.Tools, 5.0.1\n\nRecommendation:\n\nThis package has been deprecated as part of the .NET Package Deprecation effort. You can learn more about it from https://github.com/dotnet/announcements/issues/217\nRemove Microsoft.EntityFrameworkCore.Tools, and replace with new package Microsoft.EntityFrameworkCore.Tools, 10.0.3",
+            "label": "Microsoft.EntityFrameworkCore.Tools 5.0.1",
+            "properties": {
+              "PackageId": "Microsoft.EntityFrameworkCore.Tools",
+              "PackageVersion": "5.0.1",
+              "PackageNewVersion": null,
+              "PackageReplacements": null
+            }
+          }
+        },
+        {
+          "incidentId": "f52cfac1-2085-4ad8-a8a8-643a47e292cc",
+          "ruleId": "Project.0002",
+          "projectPath": "Covers.csproj",
+          "state": "Active",
+          "location": {
+            "snippetModel": {
+              "unrestricted": "Current target framework: net5.0\nRecommended target framework: net10.0",
+              "protected": "Current target framework: net5.0\nRecommended target framework: net10.0"
+            },
+            "kind": "File",
+            "path": "Covers.csproj",
+            "snippet": "Current target framework: net5.0\nRecommended target framework: net10.0",
+            "protectedSnippet": "Current target framework: net5.0\nRecommended target framework: net10.0",
+            "properties": {
+              "CurrentTargetFramework": "net5.0",
+              "RecommendedTargetFramework": "net10.0"
+            }
+          }
+        }
+      ],
+      "features": []
+    }
+  ],
+  "rules": {
+    "NuGet.0002": {
+      "id": "NuGet.0002",
+      "isFeature": false,
+      "description": "NuGet package upgrade is recommended for selected target framework.\n\nStandard .NET packages are recommended to have versions matching version of .NET that project targets.\n\nSome other packages also are known to work better for selected target frameworks.",
+      "label": "NuGet package upgrade is recommended",
+      "severity": "Potential",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262530",
+          "isCustom": false
+        }
+      ]
+    },
+    "NuGet.0004": {
+      "id": "NuGet.0004",
+      "isFeature": false,
+      "description": "NuGet package contains security vulnerabilities.\n\nPackage needs to be upgraded to a newer version that addresses known security vulnerabilities.",
+      "label": "NuGet package contains security vulnerability",
+      "severity": "Optional",
+      "effort": 1
+    },
+    "NuGet.0005": {
+      "id": "NuGet.0005",
+      "isFeature": false,
+      "description": "NuGet package is deprecated.\n\nGo to its documentation and if there is a guidance for replacement of functionality provided by this package.",
+      "label": "NuGet package is deprecated",
+      "severity": "Optional",
+      "effort": 1,
+      "links": [
+        {
+          "url": "https://go.microsoft.com/fwlink/?linkid=2262531",
+          "isCustom": false
+        }
+      ]
+    },
+    "Project.0002": {
+      "id": "Project.0002",
+      "isFeature": false,
+      "description": "Project\u0027s target framework(s) needs to be changed to the new target framework that you selected for this upgrade.\n\nDuring upgrade target framework will be adjusted to corresponding platform when applicable. In some cases project would result in multiple target frameworks after the upgrade if it was using features that now have their own platforms in modern .NET frameworks (windows, iOS, Android etc).",
+      "label": "Project\u0027s target framework(s) needs to be changed",
+      "severity": "Mandatory",
+      "effort": 1,
+      "links": [
+        {
+          "title": "Overview of porting from .NET Framework to .NET",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265227",
+          "isCustom": false
+        },
+        {
+          "title": ".NET project SDKs",
+          "url": "https://go.microsoft.com/fwlink/?linkid=2265226",
+          "isCustom": false
+        }
+      ]
+    }
+  }
+}
