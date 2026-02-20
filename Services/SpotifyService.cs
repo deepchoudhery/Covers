@@ -9,6 +9,7 @@ using SpotifyAPI.Web;
 using System;
 using System.Collections.Generic;
 using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 using System.Timers;
 
@@ -22,13 +23,15 @@ namespace Covers.Services
         private readonly ILogger<SpotifyService> _logger;
         private readonly IHubContext<CoversHub> _hubContext;
         private readonly SpotifyConfiguration _spotifyConfiguration;
+        private readonly IHttpClientFactory _httpClientFactory;
         private SpotifyClient _spotifyClient;
         private Timer _refreshTokenTimer;
 
-        public SpotifyService(ILogger<SpotifyService> logger, IConfiguration configuration, IHubContext<CoversHub> hubContext)
+        public SpotifyService(ILogger<SpotifyService> logger, IConfiguration configuration, IHubContext<CoversHub> hubContext, IHttpClientFactory httpClientFactory)
         {
             _logger = logger ?? throw new ArgumentNullException(nameof(logger));
             _hubContext = hubContext ?? throw new ArgumentNullException(nameof(hubContext));
+            _httpClientFactory = httpClientFactory ?? throw new ArgumentNullException(nameof(httpClientFactory));
             if (configuration == null)
                 throw new ArgumentNullException(nameof(configuration));
 
@@ -177,8 +180,8 @@ namespace Covers.Services
             
             if (response.Albums.Items.Count > 0)
             {
-                using var webclient = new WebClient();
-                var coverImage = webclient.DownloadData(response.Albums.Items[0].Images[0].Url);
+                var httpClient = _httpClientFactory.CreateClient();
+                var coverImage = await httpClient.GetByteArrayAsync(response.Albums.Items[0].Images[0].Url);
 
                 using var image = new MagickImage(coverImage);
                 if (image.Width > 800)

@@ -36,6 +36,7 @@ namespace Covers
                 configuration.RootPath = "ClientApp/build";
             });
 
+            services.AddHttpClient();
             services.AddDbContext<CoversContext>(options =>
                          options.UseLazyLoadingProxies().UseSqlite(Configuration.GetConnectionString("CoversContext")));
             services.AddSignalR();
