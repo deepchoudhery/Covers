@@ -12,7 +12,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Net;
+using System.Net.Http;
 using System.Threading;
 using System.Threading.Tasks;
 
@@ -402,8 +402,8 @@ namespace Covers.BackgroundServices
                         existingAlbum.Covers = new List<Cover>();
                     }
 
-                    using var webclient = new WebClient();
-                    var coverImage = webclient.DownloadData(album.Album.Images[0].Url);
+                    using var httpClient = new HttpClient();
+                    var coverImage = await httpClient.GetByteArrayAsync(album.Album.Images[0].Url);
                     
                     using var image = new MagickImage(coverImage);
                     if (image.Width > 800)

@@ -1,0 +1,13 @@
+{
+  "scenarioId": "New-DotNet-Version",
+  "operationId": "445d0801-190b-4b1e-a595-375609f85bd0",
+  "description": "Upgrade solution or project to new version of .NET",
+  "startTime": "2026-02-20T01:09:01.426485Z",
+  "lastUpdateTime": "2026-02-20T01:11:37.0518376Z",
+  "stage": "Execution",
+  "properties": {
+    "UpgradeTargetFramework": "net10.0",
+    "SelectedScenarioStrategy": "AllAtOnce"
+  },
+  "folderPath": ""
+}
