@@ -16,7 +16,7 @@ jobs:
         shell: pwsh
         run: |
           $vswhere = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe"
-          $instances = & $vswhere -all -products * -format json | Out-String | ConvertFrom-Json
+          $instances = & $vswhere -all -products * -format json -include packages | Out-String | ConvertFrom-Json
           foreach ($instance in $instances) {
             Write-Host "=== $($instance.displayName) $($instance.installationVersion) ==="
             $workloads = $instance.packages | Where-Object { $_.type -eq 'Workload' } | Select-Object -ExpandProperty id | Sort-Object
