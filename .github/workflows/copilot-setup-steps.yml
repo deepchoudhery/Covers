@@ -12,32 +12,24 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-      - name: List installed VS workloads
-        shell: pwsh
-        run: |
-          $vswhere = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe"
-          $instances = & $vswhere -all -products * -format json -include packages | Out-String | ConvertFrom-Json
-          foreach ($instance in $instances) {
-            Write-Host "=== $($instance.displayName) $($instance.installationVersion) ==="
-            $workloads = $instance.packages | Where-Object { $_.type -eq 'Workload' } | Select-Object -ExpandProperty id | Sort-Object
-            Write-Host "Installed Workloads:"
-            $workloads | ForEach-Object { Write-Host "  - $_" }
-            Write-Host ""
-          }
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '20'
       - name: Install Copilot CLI
         run: npm install -g @github/copilot
-      - name: Install VS workload for .NET Framework 4.8
+      - name: Install .NET Framework SDK and targeting packs
         shell: pwsh
         run: |
           $vsInstaller = "C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe"
-          & $vsInstaller modify --installPath "C:\Program Files\Microsoft Visual Studio\2022\Enterprise" `
-            --add Microsoft.VisualStudio.Workload.ManagedDesktop `
+          $installPath = & "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe" -latest -products * -property installationPath
+          & $vsInstaller modify --installPath $installPath `
+            --add Microsoft.Net.Component.4.7.1.TargetingPack `
+            --add Microsoft.Net.Component.4.7.2.TargetingPack `
             --add Microsoft.Net.Component.4.8.SDK `
             --add Microsoft.Net.Component.4.8.TargetingPack `
+            --add Microsoft.Net.Component.4.8.1.SDK `
+            --add Microsoft.Net.Component.4.8.1.TargetingPack `
             --quiet --norestart --wait
       - name: Verify .NET Framework 4.8 support
         shell: pwsh
