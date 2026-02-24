@@ -12,6 +12,18 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+      - name: List installed VS workloads
+        shell: pwsh
+        run: |
+          $vswhere = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe"
+          $instances = & $vswhere -all -products * -format json | Out-String | ConvertFrom-Json
+          foreach ($instance in $instances) {
+            Write-Host "=== $($instance.displayName) $($instance.installationVersion) ==="
+            $workloads = $instance.packages | Where-Object { $_.type -eq 'Workload' } | Select-Object -ExpandProperty id | Sort-Object
+            Write-Host "Installed Workloads:"
+            $workloads | ForEach-Object { Write-Host "  - $_" }
+            Write-Host ""
+          }
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
