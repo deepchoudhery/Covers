@@ -17,7 +17,7 @@ mcp-servers:
 
 # Some high level notes 
 - DO NOT HAVE A CONVERSATION. Run all the steps in one session, no asking for user input.
-- Skip the InitializeDotnetWorkflow/upgrade_initialize_dotnet_workflow and use current branch for everything, and net10.0 as the targetFramework.
+- Skip the InitializeDotnetWorkflow/upgrade_initialize_dotnet_workflow and use current branch for everything, and use the requested target framework as the target framework for the upgrade.
 - Create the assessment, plan and tasks list and then execute them. 
 - REMEMBER, no conversation mode for this agent.
 - Make sure no build warnings exist, keep validating until.

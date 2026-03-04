@@ -1,0 +1,75 @@
+name: 'Copilot Coding Agent Setup for DotNet-Modernize'
+description: 'Prepares the GitHub Copilot Coding Agent development environment with required tools and SDKs (.NET, Node.js, Copilot CLI).'
+author: 'decho'
+
+branding:
+  icon: 'cpu'
+  color: 'blue'
+
+inputs:
+  dotnet-version:
+    description: '.NET SDK version to install'
+    required: false
+    default: '10.0.x'
+  node-version:
+    description: 'Node.js version to install'
+    required: false
+    default: '20'
+  install-framework-targeting-packs:
+    description: 'Install .NET Framework SDK and targeting packs (4.7.1 – 4.8.1). Required for .NET Framework or desktop workloads on Windows runners.'
+    required: false
+    default: 'false'
+
+runs:
+  using: 'composite'
+  steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ inputs.node-version }}
+
+    - name: Install Copilot CLI
+      shell: bash
+      run: npm install -g @github/copilot
+
+    - name: Setup .NET SDK
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: ${{ inputs.dotnet-version }}
+
+    - name: Install .NET Framework SDK and targeting packs
+      if: ${{ inputs.install-framework-targeting-packs == 'true' && runner.os == 'Windows' }}
+      shell: pwsh
+      run: |
+        $vsInstaller = "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vs_installer.exe"
+        $installPath = & "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe" `
+          -latest -products * -property installationPath
+        & $vsInstaller modify --installPath $installPath `
+          --add Microsoft.Net.Component.4.7.1.TargetingPack `
+          --add Microsoft.Net.Component.4.7.2.TargetingPack `
+          --add Microsoft.Net.Component.4.8.SDK `
+          --add Microsoft.Net.Component.4.8.TargetingPack `
+          --add Microsoft.Net.Component.4.8.1.SDK `
+          --add Microsoft.Net.Component.4.8.1.TargetingPack `
+          --quiet --norestart --wait
+
+    - name: Verify .NET Framework 4.8 support
+      if: ${{ inputs.install-framework-targeting-packs == 'true' && runner.os == 'Windows' }}
+      shell: pwsh
+      run: |
+        $refAssemblies = "C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8"
+        $msbuild = & "${env:ProgramFiles(x86)}\Microsoft Visual Studio\Installer\vswhere.exe" `
+          -latest -requires Microsoft.Component.MSBuild -find MSBuild\**\Bin\MSBuild.exe | Select-Object -First 1
+        if (-not (Test-Path $refAssemblies)) {
+          Write-Error ".NET Framework 4.8 reference assemblies not found at $refAssemblies"
+          exit 1
+        }
+        if (-not $msbuild -or -not (Test-Path $msbuild)) {
+          Write-Error "MSBuild not found"
+          exit 1
+        }
+        Write-Host ".NET Framework 4.8 reference assemblies: OK"
+        Write-Host "MSBuild: $msbuild"
