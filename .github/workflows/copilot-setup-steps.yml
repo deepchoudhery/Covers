@@ -8,8 +8,7 @@ jobs:
   copilot-setup-steps:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
-      - uses: ./
+      - uses: deepchoudhery/modernize-dotnet-cca-actions@main
         with:
           dotnet-version: '10.0.x'
           install-framework-targeting-packs: 'true'
