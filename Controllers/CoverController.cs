@@ -72,7 +72,7 @@ namespace Covers.Controllers
         private static byte[] ScaleCover(byte[] coverImage, int size = 500)
         {
             using var image = new MagickImage(coverImage);
-            image.Scale(new MagickGeometry { IgnoreAspectRatio = true, Width = size, Height = size });
+            image.Scale(new MagickGeometry { IgnoreAspectRatio = true, Width = (uint)size, Height = (uint)size });
             return image.ToByteArray(MagickFormat.Png);
         }
     }
